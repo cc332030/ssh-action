@@ -1,0 +1,12 @@
+
+name: 'SSH Action'
+
+description: 'Action for SSH.'
+
+branding:
+  icon: 'loader'
+  color: 'orange'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

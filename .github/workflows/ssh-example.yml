@@ -1,0 +1,11 @@
+
+name: ssh
+
+on: [push, pull_request]
+
+jobs:
+  mirror:
+    uses: cc332030/ssh-action/.github/workflows/ssh.yml@main
+    secrets:
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      COMMAND: ssh -T git@github.com
