@@ -1,4 +1,4 @@
 
 = ssh-action
 
-see `.github/workflows/ssh-example.yml`
+see `.github/workflows/ssh.yml`

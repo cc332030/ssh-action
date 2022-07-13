@@ -1,13 +1,7 @@
 
 name: ssh
 
-on:
-  workflow_call:
-    secrets:
-      SSH_PRIVATE_KEY:
-        required: true
-      COMMAND:
-        required: false
+on: [push, pull_request]
 
 jobs:
   ssh:
@@ -18,4 +12,4 @@ jobs:
         timeout-minutes: 2
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          COMMAND: ${{ secrets.COMMAND }}
+          COMMAND: ssh -T git@github.com
